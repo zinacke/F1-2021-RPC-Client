@@ -22,7 +22,7 @@ let lapNumber = 0;
 
 resetStatus = () => {
     Client.updatePresence({
-        state: "In the paddocks",
+        state: "Dans les paddocks",
         largeImageKey: "backcover",
         startTimestamp: date
     });
@@ -56,7 +56,7 @@ f1Client.on("session", (sData) => {
         details: `${Session[sData.m_sessionType].Type} - ${
             Tracks[sData.m_trackId].Name
         } - [${raceCompletion}% done]`,
-        state: `Driving for ${Teams[teamId].Team} - Lap ${lapNumber}/${sData.m_totalLaps}`,
+        state: `Driving for ${Teams[teamId].Team} - Lap ${sData.m_currentLapTimeInMS}`,
         smallImageKey: "backcover",
         smallImageText: "F1 2021",
         largeImageKey: `${LargeImage[sData.m_trackId].imageKey}`,
