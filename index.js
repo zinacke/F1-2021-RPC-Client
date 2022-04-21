@@ -71,7 +71,7 @@ f1Client.on("session", (sData) => {
 });
 
 Client.updatePresence({
-    state: "In the paddocks",
+    state: "Dans les paddocks",
     largeImageKey: "backcover",
     startTimestamp: date
 });
